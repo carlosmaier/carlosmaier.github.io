@@ -1,2 +1,141 @@
-Hello, world!
+<!DOCTYPE html>
+<html>
 
+  <head>
+    <style>
+      .banner-image {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 128px;
+      }
+
+      .thumbnail {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+      }
+
+      body {
+        background-color: #fdfdf2 ;
+        display: flex;
+        justify-content: center;
+      }
+
+      .name {
+        color: #020826;
+        display: flex;
+        justify-content: center;
+      }
+
+      .banner {
+        display: flex;
+        justify-content: center;
+      }
+
+      .social-icons a{
+        color:grey;
+        text-decoration:none;
+      }
+      
+      .social-icons {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .link {
+        background-color: #f9f4ef;
+        display: flex;
+        align-items: center;
+      }
+
+      .link a {
+        color:#f25042;
+        text-decoration: none;
+        text-align: center;
+        flex-grow: 1;
+      }
+
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 800px;
+        flex-grow:1;
+      }
+
+      * {
+        border: thin red solid;
+      }
+
+    </style>
+</head>
+
+
+<body>
+
+  <div class="items">
+
+    <div class="banner">
+      <img class="banner-image" src="/thumbnails/profile_pic.jpg">
+    </div>
+    
+    <div class="name">
+      Carlos Maier
+    </div>
+    
+    <div class="social-icons">
+      <a href="https://www.instagram.com/carlosmaier_/" target="_blank">
+        Personal Instagram
+      </a>
+    
+      <a href="https://www.instagram.com/carlograma/" target="_blank">
+      Photography Instagram
+      </a>
+    
+      <a href="https://www.linkedin.com/in/carlosmaier/" target="_blank">
+      LinkedIn
+      </a>
+    
+    </div>
+  
+    <div class="link">
+      
+      <img class="thumbnail" src="/thumbnails/work.jpg">
+      <a target="_blank"
+      href="https://www.dropbox.com/s/iunkx2yk1qix8ms/CV_Carlos%20Maier_v221103.pdf?dl=0">
+      My resume
+      </a>
+    </div> 
+
+    <div class="link">
+      
+      <img class="thumbnail" src="/thumbnails/mountains.png">
+      <a target="_blank"
+      href="https://www.newyorker.com/magazine/2007/12/10/the-checklist">
+      A useful article
+      </a>
+    </div>
+  
+    <div class="link">
+    
+      <img class="thumbnail" src="/thumbnails/tree.jpg">
+      <a target="_blank" href="http://paulgraham.com/startupideas.html">How to Get Startup Ideas
+        — Paul Graham
+      </a>
+    </div>
+  
+    <div class="link">
+      
+      <img class="thumbnail" src="/thumbnails/tree.jpg">
+      <a target="_blank"
+      href="https://www.dropbox.com/s/iunkx2yk1qix8ms/CV_Carlos%20Maier_v221103.pdf?dl=0">
+      Stuff 4
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
