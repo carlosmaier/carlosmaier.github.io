@@ -15,8 +15,8 @@
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
-      </style>
-      
+      </style>     
+
     <style>
       .banner-image {
         width: 128px;
@@ -60,6 +60,8 @@
       .social-icons a{
         color:rgb(255, 255, 255);
         text-decoration:none;
+        margin: auto;
+        
       }
       
       .social-icons {
@@ -69,13 +71,23 @@
 
       .link {
         background-color: #ffffff;
+        border-radius: 500px;
+        margin: auto;
+        width: 70%;
         display: flex;
         align-items: center;
-        padding: 5px
+        box-shadow: var(--shadow-elevation-low);
+        padding: 5px;
+        transition: 0.3s;
+      }
+
+      .link:hover {
+        box-shadow: var(--shadow-elevation-medium);
       }
 
       .link a {
-        color:#1d6ca4;
+        color:rgb(255, 255, 255);
+        /* color:#1d6ca4; */
         text-decoration: none;
         text-align: center;
         flex-grow: 1;
@@ -83,15 +95,54 @@
         font-size: 300;
       }
 
+      .glassy {
+      background-color: rgba(217, 237, 241, 0.307);
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      .glassy {
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: rgba(217, 237, 241, 0.25);
+      }
+      
+      .warning {
+        display: none;
+      }
+    }
+
       .items {
+        margin: auto;
+        padding: 30px;
+        max-width: 640px;
         display: flex;
         flex-direction: column;
         gap: 30px;
-        max-width: 800px;
         flex-grow:1;
       }
 
-      
+      :root {
+        --shadow-color: 174deg 84% 14%;
+        --shadow-elevation-low:
+          0.4px 0.6px 0.9px hsl(var(--shadow-color) / 0.3),
+          0.8px 1.1px 1.6px -1px hsl(var(--shadow-color) / 0.34),
+          1.8px 2.6px 3.7px -2.1px hsl(var(--shadow-color) / 0.37);
+        --shadow-elevation-medium:
+          0.4px 0.6px 0.9px hsl(var(--shadow-color) / 0.31),
+          1.6px 2.3px 3.3px -0.7px hsl(var(--shadow-color) / 0.34),
+          3.8px 5.5px 7.9px -1.4px hsl(var(--shadow-color) / 0.37),
+          8.9px 13px 18.7px -2.1px hsl(var(--shadow-color) / 0.4);
+        --shadow-elevation-high:
+          0.4px 0.6px 0.9px hsl(var(--shadow-color) / 0.29),
+          2.9px 4.3px 6.1px -0.3px hsl(var(--shadow-color) / 0.3),
+          5.4px 8px 11.4px -0.6px hsl(var(--shadow-color) / 0.32),
+          8.7px 12.8px 18.3px -0.9px hsl(var(--shadow-color) / 0.33),
+          13.5px 19.8px 28.4px -1.2px hsl(var(--shadow-color) / 0.35),
+          20.7px 30.3px 43.5px -1.5px hsl(var(--shadow-color) / 0.36),
+          30.9px 45.3px 65px -1.8px hsl(var(--shadow-color) / 0.37),
+          45.1px 66.1px 94.8px -2.1px hsl(var(--shadow-color) / 0.39);
+      }
+
     </style>
 </head>
 
@@ -119,7 +170,7 @@
     
     </div>
   
-    <div class="link">
+    <div class="link glassy">
       
       <img class="thumbnail" src="/thumbnails/carlosmaier.jfif">
       <a target="_blank"
@@ -128,7 +179,7 @@
       </a>
     </div> 
 
-    <div class="link">
+    <div class="link glassy">
       
       <img class="thumbnail" src="/thumbnails/whatsapp.png">
       <a target="_blank"
@@ -137,7 +188,7 @@
       </a>
     </div>
   
-    <div class="link">
+    <div class="link glassy">
     
       <img class="thumbnail" src="/thumbnails/googlecalendar.png">
       <a target="_blank" href="https://calendar.google.com/calendar/u/0?cid=Y2FybG9zbWFpZXJAY2hpY2Fnb2Jvb3RoLmVkdQ">
@@ -145,7 +196,7 @@
       </a>
     </div>
   
-    <div class="link">
+    <div class="link glassy">
       
       <img class="thumbnail" src="/thumbnails/mrcupon.jpg">
       <a target="_blank"
@@ -154,7 +205,7 @@
       </a>
     </div>
 
-    <div class="link">
+    <div class="link glassy">
       
       <img class="thumbnail" src="/thumbnails/mountain.jpg">
       <a target="_blank"
