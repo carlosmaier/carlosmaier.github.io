@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
     <meta charset="UTF-8">
@@ -25,6 +25,28 @@
         border-radius: 128px;
       }
 
+    
+      .background--custom {
+        background: linear-gradient(135deg, #1F005C, #08AAC9, #5BDD0F);
+        background-size: 300% 300%;
+        animation: gradient 9s alternate infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+      }
+      
+      @keyframes gradient {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 100%;
+        }
+      }
+
       .thumbnail {
         width: 48px;
         height: 48px;
@@ -35,7 +57,7 @@
       body {
         min-height: 100%;
         height: fit-content;
-        background: linear-gradient(90deg, #1f005c, #030c6b, #07427b, #0c828a, #129a6a, #19a939, #3fb920, #8cc829);
+        /*background: linear-gradient(90deg, #1f005c, #030c6b, #07427b, #0c828a, #129a6a, #19a939, #3fb920, #8cc829);
         /* background: linear-gradient(90deg, #1f005c, #4d0773, #85118b, #a21d7f, #b92c68, #d03e50, #e87053, #ffb56b); */
         display: flex;
         justify-content: center;
@@ -59,14 +81,25 @@
 
       .social-icons a{
         color:rgb(255, 255, 255);
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
         text-decoration:none;
-        margin: auto;
-        
+        margin: auto;        
       }
       
       .social-icons {
         display: flex;
         justify-content: space-around;
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+
+      .location {
+        color: #ffffff;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
       }
 
       .link {
@@ -117,7 +150,7 @@
         max-width: 640px;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
         flex-grow:1;
       }
 
@@ -148,9 +181,9 @@
 
 
 <body>
-
+  <div class="background--custom"></div>
   <div class="items">
-
+        
     <div class="banner">
       <img class="banner-image" src="/thumbnails/profile_pic.jpg">
     </div>
@@ -158,7 +191,11 @@
     <div class="name">
       Carlos Maier
     </div>
-    
+
+    <div class="location">
+      &#128205 Currently in Chicago, IL
+    </div>
+
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/carlosmaier/" target="_blank">
         <i class="fa-brands fa-linkedin-in"></i>
@@ -181,6 +218,15 @@
 
     <div class="link glassy">
       
+      <img class="thumbnail" src="/thumbnails/mail.png">
+      <a target="_blank"
+      href=mailto:carlosmaier@chicagobooth.edu?subject=Quick_Email:>
+      Shoot me an e-mail
+      </a>
+    </div>
+
+    <div class="link glassy">
+      
       <img class="thumbnail" src="/thumbnails/whatsapp.png">
       <a target="_blank"
       href="https://wa.me/18573130134">
@@ -192,7 +238,7 @@
     
       <img class="thumbnail" src="/thumbnails/googlecalendar.png">
       <a target="_blank" href="https://calendar.google.com/calendar/u/0?cid=Y2FybG9zbWFpZXJAY2hpY2Fnb2Jvb3RoLmVkdQ">
-        See my calendar
+        See my calendar availability
       </a>
     </div>
   
